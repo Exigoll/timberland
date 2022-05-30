@@ -26,6 +26,8 @@
   justify-content: space-between;
   @include adaptive-value("padding-top", 45, 20, 1);
   @include adaptive-value("padding-bottom", 45, 20, 1);
+  border-bottom: 1px solid $colorSmokyWhite;
+
   @media (max-width: em(620)) {
     flex-direction: column;
     row-gap: 15px;
@@ -66,7 +68,8 @@
   }
   &__subtitle {
     font-weight: 400;
-    color: $colorGray;
+    @include adaptive-value("font-size", 14, 12, 1);
+    color: $colorPearlLightGray;
   }
 }
 
@@ -80,7 +83,7 @@
     }
     span {
       font-weight: 600;
-      color: $colorDarkGray;
+      color: $colorWetAsphalt;
     }
   }
 
@@ -96,5 +99,90 @@
       width: 20px;
       height: 20px;
     }
+  }
+}
+
+// Content
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  &__title {
+    padding-bottom: 30px;
+    @include adaptive-value("font-size", 32, 24, 1);
+    @include adaptive-value("line-height", 39, 31, 1);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-items: center;
+
+    @media (max-width: em(1139)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: em(869)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(600)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+
+.itemContent {
+  width: 210px;
+  padding: 20px 29px 35px 30px;
+  background: $colorWhite;
+  border: 1px solid $colorSmokyWhite;
+  border-radius: 40px;
+
+  &__img {
+    width: 133px;
+    height: 112px;
+  }
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__info {
+
+  }
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__price {
+    p {
+      padding-bottom: 2px;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      color: $colorLightGray;
+    }
+
+    span {
+
+    }
+  }
+
+  &__img {
+    width: 11px;
+    height: 11px;
   }
 }
