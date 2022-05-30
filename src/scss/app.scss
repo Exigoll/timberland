@@ -1,0 +1,100 @@
+@import "fonts";
+@import "libs";
+@import "global";
+@import "vars";
+@import "mixin";
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: $colorWhite;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 60px auto;
+  @include adaptive-value("padding-right", 60, 20, 1);
+  @include adaptive-value("padding-left", 60, 20, 1);
+}
+
+// Header
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @include adaptive-value("padding-top", 45, 20, 1);
+  @include adaptive-value("padding-bottom", 45, 20, 1);
+  @media (max-width: em(620)) {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    @media (max-width: em(620)) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.logoHeader {
+  &__img {
+    @include adaptive-value("width", 80, 60, 1);
+    @include adaptive-value("height", 80, 60, 1);
+  }
+  &__title {
+
+  }
+}
+
+.titleLogo {
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    font-weight: 400;
+    color: $colorGray;
+  }
+}
+
+.menuHeader {
+  &__cart {
+    display: flex;
+    column-gap: 10px;
+    img {
+      width: 19px;
+      height: 17px;
+    }
+    span {
+      font-weight: 600;
+      color: $colorDarkGray;
+    }
+  }
+
+  &__favorites {
+    img {
+      width: 21px;
+      height: 19px;
+    }
+  }
+
+  &__user {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
