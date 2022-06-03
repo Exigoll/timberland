@@ -4,40 +4,70 @@ function App() {
   return (
     <div className="wrapper">
       <div className="container">
+        <div className="overlay">
+          <div className="drawer">
+            <h3 className="drawer__title">Корзина</h3>
+            <div className="drawer__wrapper">
+              <div className="drawer__list drawerList">
+                <div className="drawerList__item">
+                  <img className="drawerList__img"
+                       src="./assets/image/sneakers/sneakers-1.png"
+                       alt="Sneakers" />
+                  <div className="drawerList__info">
+                    <h4 className="drawerList__title">
+                      Мужские Кроссовки Nike Air Max 270
+                    </h4>
+                    <p className="drawerList__price">
+                      12 999 руб.
+                    </p>
+                  </div>
+                  <svg className="drawerList__closed"
+                       width="32"
+                       height="32"
+                       viewBox="0 0 32 32"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="white" stroke="#DBDBDB" />
+                    <path
+                      d="M20.0799 18.6155L17.6311 16.1667L20.0798 13.718C21.0241 12.7738 19.5596 11.3093 18.6154 12.2536L16.1667 14.7023L13.7179 12.2535C12.7738 11.3095 11.3095 12.7738 12.2535 13.7179L14.7023 16.1667L12.2536 18.6154C11.3093 19.5596 12.7738 21.0241 13.718 20.0798L16.1667 17.6311L18.6155 20.0799C19.5597 21.0241 21.0241 19.5597 20.0799 18.6155Z"
+                      fill="#B5B5B5" />
+                  </svg>
+                </div>
+              </div>
+              <div className="drawer__total totalDrawer">
+                <div className="totalDrawer__info">
+                  <p>Итого:</p>
+                  <div></div>
+                  <span>21 498 руб.</span>
+                </div>
+                <div className="totalDrawer__info">
+                  <p>Налог 5%:</p>
+                  <div></div>
+                  <span>1074 руб.</span>
+                </div>
+                <button className="totalDrawer__btn">
+                  <p>Оформить заказ</p>
+                  <svg width="16"
+                       height="14"
+                       viewBox="0 0 16 14"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7H14.7143" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                    <path d="M8.71436 1L14.7144 7L8.71436 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <header className="header">
           <div className="header__logo logoHeader">
-            <svg className="logoHeader__img" enableBackground="new 0 0 24 24" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="Layer_27"/>
-              <g id="Layer_2"/>
-              <g id="Layer_3"/>
-              <g id="Layer_4"/>
-              <g id="Layer_5"/>
-              <g id="Layer_6"/>
-              <g id="Layer_7"/>
-              <g id="Layer_8"/>
-              <g id="Layer_9"/>
-              <g id="Layer_10"/>
-              <g id="Layer_11"/>
-              <g id="Layer_12"/>
-              <g id="Layer_13"/>
-              <g id="Layer_14"/>
-              <g id="Layer_15"><path d="M22,13.58V18c0,0.55-0.45,1-1,1H3c-0.55,0-1-0.45-1-1V8c0-1.65,1.35-3,3-3h1.04c0.55,0,1,0.45,1,1   c0,1.1,0.9,2,2,2c0.9901,0,1.84-0.73,1.97-1.7c0.01-0.05,0.04-0.1,0.05-0.15c0.02-0.06,0.03-0.12,0.05-0.17   c0.01-0.01,0.02-0.02,0.02-0.03c0.03-0.05,0.08-0.09,0.12-0.14c0.05-0.06,0.08-0.11,0.14-0.16c0.03-0.02,0.07-0.03,0.11-0.06   c0.07-0.04,0.15-0.08,0.23-0.11c0.04-0.01,0.09-0.01,0.14-0.01c0.08-0.01,0.16-0.03,0.24-0.02h0.03C12.2,5.46,12.25,5.49,12.3,5.51   c0.06,0.0099,0.11,0.02,0.16,0.04l3,1.57l1.86,0.98l0.76,0.4l1.04,0.54c0.28,0.13,0.55,0.29,0.79,0.47   C21.19,10.42,22,11.94,22,13.58z" fill="#189CD8"/>
-                <g><path d="M22,14v4c0,0.55-0.45,1-1,1H3c-0.55,0-1-0.45-1-1v-4H22z" fill="#FFA131"/></g>
-                <g><path d="M17.32,8.1l-3.61,3.61C13.51,11.9,13.26,12,13,12s-0.51-0.1-0.71-0.29c-0.39-0.39-0.39-1.03,0-1.42    l3.17-3.17L17.32,8.1z" fill="#624F81"/></g>
-                <g><path d="M19.91,9.51l-2.2,2.2C17.51,11.9,17.26,12,17,12s-0.51-0.1-0.71-0.29c-0.39-0.39-0.39-1.03,0-1.42    l1.79-1.79l1.04,0.54C19.4,9.17,19.67,9.33,19.91,9.51z" fill="#624F81"/></g>
-                <g><rect fill="#624F81" height="2" width="20" x="2" y="14"/></g></g>
-              <g id="Layer_16"><g id="Layer_17"/></g>
-              <g id="Layer_18"/>
-              <g id="Layer_19"/>
-              <g id="Layer_20"/>
-              <g id="Layer_21"/>
-              <g id="Layer_22"/>
-              <g id="Layer_23"/>
-              <g id="Layer_24"/>
-              <g id="Layer_25"/>
-              <g id="Layer_26"/></svg>
-            <div className="logoHeader__title titleLogo">
-              <h1 className="titleLogo__title">street beat</h1>
-              <h2 className="titleLogo__subtitle">Only original products</h2>
+            <img className="logoHeader__img" src="../assets/svgicons/logo.svg" alt="Logo" />
+            <div className="logoHeader__wrapper">
+              <h1 className="logoHeader__title">street beat</h1>
+              <h2 className="logoHeader__subtitle">Only original products</h2>
             </div>
           </div>
           <div className="header__menu menuHeader">
@@ -73,11 +103,24 @@ function App() {
         </header>
         <main>
           <section className="content">
-            <h3 className="content__title">
-              Все кроссовки
-            </h3>
+            <div className="content__wrapper">
+              <h3 className="content__title">
+                Все кроссовки
+              </h3>
+              <div className="content__search searchContent">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.25 15.25L11.8855 11.8795L15.25 15.25ZM13.75 7.375C13.75 9.06576 13.0784 10.6873 11.8828 11.8828C10.6873 13.0784 9.06576 13.75 7.375 13.75C5.68424 13.75 4.06274 13.0784 2.86719 11.8828C1.67165 10.6873 1 9.06576 1 7.375C1 5.68424 1.67165 4.06274 2.86719 2.86719C4.06274 1.67165 5.68424 1 7.375 1C9.06576 1 10.6873 1.67165 11.8828 2.86719C13.0784 4.06274 13.75 5.68424 13.75 7.375V7.375Z"
+                    stroke="#E4E4E4" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+                <input type="text" placeholder="Search..." />
+              </div>
+            </div>
             <div className="content__list">
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-1.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Nike Blazer Mid Suede
@@ -87,14 +130,13 @@ function App() {
                     <p>Цена:</p>
                     <span>12 199 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-2.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Nike Air Max 270
@@ -104,14 +146,13 @@ function App() {
                     <p>Цена:</p>
                     <span>12 999 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-3.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Nike Blazer Mid Suede
@@ -121,14 +162,13 @@ function App() {
                     <p>Цена:</p>
                     <span>8 499 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-4.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Кроссовки Puma X Aka Boku Future Rider
@@ -138,14 +178,13 @@ function App() {
                     <p>Цена:</p>
                     <span>8 999 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-5.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Under Armour Curry 8
@@ -155,14 +194,13 @@ function App() {
                     <p>Цена:</p>
                     <span>15 199 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-6.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Nike Kyrie 7
@@ -172,14 +210,13 @@ function App() {
                     <p>Цена:</p>
                     <span>11 299 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-7.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Jordan Air Jordan 11
@@ -189,14 +226,13 @@ function App() {
                     <p>Цена:</p>
                     <span>10 799 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
               <div className="content__item itemContent">
+                <div className="itemContent__favorite">
+                  <img src="./assets/svgicons/heart-unliked.svg" alt="Heard-unliked" />
+                </div>
                 <img className="itemContent__img" src="../assets/image/sneakers/sneakers-8.png" alt="Sneakers" />
                 <h4 className="itemContent__title">
                   Мужские Кроссовки Nike LeBron XVIII
@@ -206,11 +242,7 @@ function App() {
                     <p>Цена:</p>
                     <span>16 499 руб.</span>
                   </div>
-                  <svg className="infoItem__img" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.6653 5.13122H7.20212V1.66821C7.20212 0.332846 5.13112 0.332846 5.13112 1.66821V5.13122H1.66799C0.33292 5.13122 0.33292 7.20215 1.66799 7.20215H5.13112V10.6652C5.13112 12.0005 7.20212 12.0005 7.20212 10.6652V7.20215H10.6653C12.0005 7.20215 12.0005 5.13122 10.6653 5.13122Z"
-                      fill="#D3D3D3"/>
-                  </svg>
+                  <img className="infoItem__img" src="./assets/svgicons/btn-plus.svg" alt="PlusSvg" />
                 </div>
               </div>
             </div>
@@ -218,7 +250,8 @@ function App() {
         </main>
       </div>
     </div>
-  );
+  )
+    ;
 }
 
 export default App;

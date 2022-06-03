@@ -13,8 +13,9 @@
 }
 
 .container {
+  position: relative;
   max-width: 1080px;
-  margin: 60px auto;
+  margin: 30px auto;
   @include adaptive-value("padding-right", 60, 20, 1);
   @include adaptive-value("padding-left", 60, 20, 1);
 }
@@ -36,7 +37,7 @@
   &__logo {
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
   }
 
   &__menu {
@@ -51,15 +52,13 @@
 
 .logoHeader {
   &__img {
-    @include adaptive-value("width", 80, 60, 1);
-    @include adaptive-value("height", 80, 60, 1);
+    @include adaptive-value("width", 60, 50, 1);
+    @include adaptive-value("height", 60, 50, 1);
   }
-  &__title {
+
+  &__wrapper {
 
   }
-}
-
-.titleLogo {
   &__title {
     font-weight: 700;
     font-size: 20px;
@@ -107,11 +106,24 @@
 .content {
   padding-top: 40px;
   padding-bottom: 30px;
-  &__title {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 30px;
+
+
+    @media (max-width: em(600)) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  &__title {
     @include adaptive-value("font-size", 32, 24, 1);
     @include adaptive-value("line-height", 39, 31, 1);
   }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -138,14 +150,35 @@
     flex-direction: column;
     row-gap: 15px;
   }
+
+  &__search {
+
+  }
 }
 
 .itemContent {
+  position: relative;
   width: 210px;
   padding: 20px 29px 35px 30px;
   background: $colorWhite;
   border: 1px solid $colorSmokyWhite;
   border-radius: 40px;
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .06);
+    transform: translateY(-5px);
+  }
+
+  &__favorite {
+    position: absolute;
+    cursor: pointer;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
 
   &__img {
     width: 133px;
@@ -182,7 +215,169 @@
   }
 
   &__img {
-    width: 11px;
-    height: 11px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+
+.searchContent {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+  }
+  input {
+    padding: 13px 13px 13px 32px;
+    border: 1px solid $colorSmokyWhite;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 400;
+    color: $colorSmokyWhite;
+
+    &:active {
+      opacity: .5;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+// Drawer
+
+.drawer {
+  position: absolute;
+  right: 0;
+  width: 385px;
+  height: 100%;
+  padding: 0 30px;
+  background: $colorWhite;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    padding-top: 32px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 122px;
+    height: 774px;
+    padding: 30px 0;
+
+    .drawer__item {
+      overflow: auto;
+    }
+  }
+}
+
+.drawerList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 325px;
+  margin: 0 auto;
+  overflow: auto;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $colorSmokyWhite;
+    border-radius: 20px;
+    padding: 30px 20px;
+    column-gap: 12px;
+
+    @media (max-width: em(415)) {
+      @include adaptive-value("padding-top", 30, 20, 1);
+      @include adaptive-value("padding-right", 20, 10, 1);
+      @include adaptive-value("padding-bottom", 30, 20, 1);
+      @include adaptive-value("padding-left", 20, 10, 1);
+    }
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    margin-right: 9px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &__title {
+    max-width: 150px;
+    font-weight: 400;
+  }
+}
+
+.totalDrawer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 19px;
+
+    p {
+      font-weight: 400;
+    }
+
+    div {
+      position: relative;
+      top: -4px;
+      margin: 0 10px;
+      flex: 1;
+      border-bottom: 1px dashed $colorGainsborough;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 18px 0;
+    width: 325px;
+    background-color: $colorYellowishGreen;
+    border-radius: 18px;
+    color: $colorWhite;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+
+    p {
+      margin-right: 60px;
+      padding-left: 70px;
+    }
+    svg {
+      width: 14px;
+      height: 12px;
+    }
   }
 }
