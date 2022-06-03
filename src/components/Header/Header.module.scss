@@ -1,0 +1,81 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @include adaptive-value("padding-top", 45, 20, 1);
+  @include adaptive-value("padding-bottom", 45, 20, 1);
+  border-bottom: 1px solid $colorSmokyWhite;
+
+  @media (max-width: em(620)) {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    @media (max-width: em(620)) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.logoHeader {
+  &__img {
+    @include adaptive-value("width", 60, 50, 1);
+    @include adaptive-value("height", 60, 50, 1);
+  }
+
+  &__wrapper {
+
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    font-weight: 400;
+    @include adaptive-value("font-size", 14, 12, 1);
+    color: $colorPearlLightGray;
+  }
+}
+
+.menuHeader {
+  &__cart {
+    display: flex;
+    column-gap: 10px;
+    img {
+      width: 19px;
+      height: 17px;
+    }
+    span {
+      font-weight: 600;
+      color: $colorWetAsphalt;
+    }
+  }
+
+  &__favorites {
+    img {
+      width: 21px;
+      height: 19px;
+    }
+  }
+
+  &__user {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
