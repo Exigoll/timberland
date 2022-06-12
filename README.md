@@ -22,13 +22,11 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 <hr>
 
 ## Development stages
-* [Build]()
-* [Production]()
+* [Build](https://github.com/Exigoll/timberland/tree/dev)
+* [Production](https://github.com/Exigoll/timberland/tree/prod)
 * [Deploy]()
 
-<hr>
-
-### Technology stack
+## Technology stack
 * React ver. 18.0
 * React Hooks:
   * useState()
@@ -40,18 +38,14 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 * mockAPI
 * SCSS / module SCSS
 
-<hr>
-
-### Dependencies
+## Dependencies
 * react-content-loader
 * react-router-dom
 * normalize.css
 * sass
 * axios
 
-<hr>
-
-#### Contacts info
+## Contacts info
 * Location: city of Perm
 * Telegram: [Exigoll](https://t.me/exigoll)
 * Email: exigoll@bk.ru
