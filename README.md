@@ -8,6 +8,7 @@ The store has the following features:
 * calculation of the cost of goods
 * completion of the purchase of goods (frontend only)
 * view completed orders
+* implemented search function by name (in any case)
 
 P.S. Used as a server [mockAPI](https://mockapi.io)
 
