@@ -10,7 +10,7 @@ const Header = (props) => {
 
   return (
     <header className={styles.header}>
-      <Link to="/" className={`${styles.header__logo} ${styles.logoHeader}`}>
+      <Link to="" className={`${styles.header__logo} ${styles.logoHeader}`}>
         <img className={styles.logoHeader__img}
              src="assets/svgicons/logo-timberland.svg"
              alt="Logo" />
