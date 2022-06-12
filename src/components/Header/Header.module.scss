@@ -30,20 +30,16 @@
 }
 
 .logoHeader {
+  display: flex;
+  flex-direction: column;
+
   &__img {
-    @include adaptive-value("width", 60, 50, 1);
-    @include adaptive-value("height", 60, 50, 1);
+    width: 150px;
+    height: 30px;
+    /*@include adaptive-value("width", 60, 50, 1);
+    @include adaptive-value("height", 60, 50, 1);*/
   }
 
-  &__wrapper {
-
-  }
-  &__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
   &__subtitle {
     font-weight: 400;
     @include adaptive-value("font-size", 14, 12, 1);
@@ -52,13 +48,17 @@
 }
 
 .menuHeader {
+
   &__cart {
     display: flex;
     column-gap: 10px;
-    img {
+    cursor: pointer;
+
+    svg {
       width: 19px;
       height: 17px;
     }
+
     span {
       font-weight: 600;
       color: $colorWetAsphalt;
@@ -66,16 +66,27 @@
   }
 
   &__favorites {
-    img {
+    svg {
       width: 21px;
       height: 19px;
+      cursor: pointer;
     }
   }
 
   &__user {
-    img {
+    svg {
       width: 20px;
       height: 20px;
+      cursor: pointer;
     }
   }
+
+  &__cart, &__favorites, &__user {
+    transition: .5s ease;
+  }
+
+  &__cart:hover, &__favorites:hover, &__user:hover {
+    transform: scale(1.3);
+  }
+
 }

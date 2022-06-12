@@ -5,51 +5,69 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
   z-index: 1;
 }
 
-// Drawer
-
 .drawer {
   position: absolute;
+  top: 9px;
   right: 0;
-  width: 385px;
-  height: 100%;
+  max-width: 385px;
+  height: 95vh;
   padding: 0 30px;
   background: $colorWhite;
+  border-radius: 20px 0 0 20px;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
 
-  &__title {
-    padding-top: 32px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-    font-size: 24px;
-    line-height: 29px;
+  @media (max-width: em(420)) {
+    @include adaptive-value("max-width", 385, 320, 1);
+    padding: 0 10px;
   }
 
-  &__wrapper {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 30px;
+
+    h3 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  &__buttonClosedCart {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  &__cart {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    row-gap: 122px;
-    height: 774px;
+    row-gap: 10px;
+    height: 100%;
+    max-height: 85vh;
     padding: 30px 0;
 
     .drawer__item {
       overflow: auto;
     }
   }
+  &__empty {
+
+  }
 }
 
 .drawerList {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 30px;
   max-width: 325px;
+  height: 75%;
   margin: 0 auto;
   overflow: auto;
 
@@ -57,8 +75,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid $colorSmokyWhite;
-    border-radius: 20px;
     padding: 30px 20px;
     column-gap: 12px;
 
@@ -71,9 +87,8 @@
   }
 
   &__img {
-    width: 70px;
-    height: 70px;
-    margin-right: 9px;
+    width: 85px;
+    height: 55px;
   }
 
   &__info {
@@ -86,9 +101,10 @@
     font-weight: 400;
   }
 
-  &__closed {
+  &__delete {
     width: 32px;
     height: 32px;
+    cursor: pointer;
   }
 }
 
@@ -102,6 +118,10 @@
     justify-content: space-between;
     font-size: 16px;
     line-height: 19px;
+    @media (max-width: em(420)) {
+      @include adaptive-value("font-size", 16, 14, 1);
+
+    }
 
     p {
       font-weight: 400;
@@ -127,7 +147,7 @@
     margin-top: 5px;
     padding: 18px 0;
     width: 325px;
-    background-color: $colorYellowishGreen;
+    background-color: $colorButton;
     border-radius: 18px;
     color: $colorWhite;
     font-weight: 600;
@@ -135,13 +155,67 @@
     line-height: 19px;
     cursor: pointer;
 
+    @media (max-width: em(420)) {
+      margin: 0 auto;
+      padding: 10px 0;
+      width: 260px;
+    }
+
+    &:disabled {
+      background-color: #bebebe;
+      cursor: default;
+      animation: button-loading 1s ease-in-out infinite;
+    }
+
     p {
       margin-right: 60px;
       padding-left: 70px;
+      @media (max-width: em(420)) {
+        margin-right: 20px;
+        padding-left: 30px;
+      }
     }
     svg {
       width: 14px;
       height: 12px;
     }
+  }
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
+
+  &__img {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    opacity: .4;
+  }
+}
+
+@keyframes button-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
   }
 }

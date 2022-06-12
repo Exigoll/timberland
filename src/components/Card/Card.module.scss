@@ -9,7 +9,6 @@
   width: 210px;
   padding: 20px 29px 35px 30px;
   background: $colorWhite;
-  border: 1px solid $colorSmokyWhite;
   border-radius: 40px;
   transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 
@@ -19,21 +18,22 @@
   }
 
   &__favorite {
-    position: absolute;
+    margin-bottom: -15px;
     cursor: pointer;
 
     img {
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
     }
   }
 
   &__img {
-    width: 133px;
-    height: 112px;
+    width: 150px;
+    height: 90px;
   }
 
   &__title {
+    max-width: 120px;
     font-weight: 400;
   }
 
@@ -62,9 +62,12 @@
     }
   }
 
-  &__img {
-    width: 32px;
-    height: 32px;
+  &__button {
     cursor: pointer;
+    img {
+      width: 32px;
+      height: 32px;
+
+    }
   }
 }
