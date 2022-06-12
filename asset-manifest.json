@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/timberland/static/css/main.095511d7.css",
-    "main.js": "/timberland/static/js/main.558d172d.js",
+    "main.js": "/timberland/static/js/main.b0dbbef0.js",
     "index.html": "/timberland/index.html",
     "main.095511d7.css.map": "/timberland/static/css/main.095511d7.css.map",
-    "main.558d172d.js.map": "/timberland/static/js/main.558d172d.js.map"
+    "main.b0dbbef0.js.map": "/timberland/static/js/main.b0dbbef0.js.map"
   },
   "entrypoints": [
     "static/css/main.095511d7.css",
-    "static/js/main.558d172d.js"
+    "static/js/main.b0dbbef0.js"
   ]
 }
