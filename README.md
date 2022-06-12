@@ -19,8 +19,8 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 
 ## Development stages
 * [Homepage](https://exigoll.github.io/timberland/)
-* [Build](https://github.com/Exigoll/timberland/tree/dev)
-* [Production](https://github.com/Exigoll/timberland/tree/prod)
+* [Build](https://github.com/Exigoll/timberland)
+* [Production](https://github.com/Exigoll/timberland/tree/gh-pages)
 
 ## Technology stack
 * React ver. 18.0
