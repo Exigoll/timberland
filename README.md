@@ -18,9 +18,9 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 3. Start the project:  ``npm start``
 
 ## Development stages
+* [Homepage](https://exigoll.github.io/timberland/)
 * [Build](https://github.com/Exigoll/timberland/tree/dev)
 * [Production](https://github.com/Exigoll/timberland/tree/prod)
-* [Deploy]()
 
 ## Technology stack
 * React ver. 18.0
