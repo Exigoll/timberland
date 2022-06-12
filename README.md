@@ -33,6 +33,7 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 * RestAPI: Axios / Fetch
 * mockAPI
 * SCSS / module SCSS
+* React Skeleton
 
 ## Dependencies
 * react-content-loader
