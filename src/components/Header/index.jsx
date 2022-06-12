@@ -10,7 +10,7 @@ const Header = (props) => {
 
   return (
     <header className={styles.header}>
-      <Link to="timberland/" className={`${styles.header__logo} ${styles.logoHeader}`}>
+      <Link to="/" className={`${styles.header__logo} ${styles.logoHeader}`}>
         <img className={styles.logoHeader__img}
              src="assets/svgicons/logo-timberland.svg"
              alt="Logo" />
@@ -38,7 +38,7 @@ const Header = (props) => {
           <span>{productPrice} руб.</span>
         </div>
         <div className={styles.menuHeader__favorites}>
-          <Link to="timberland/favorites">
+          <Link to="/favorites">
             <svg width="22"
                  height="19"
                  viewBox="0 0 22 19"
@@ -51,7 +51,7 @@ const Header = (props) => {
           </Link>
         </div>
         <div className={styles.menuHeader__user}>
-          <Link to="timberland/orders">
+          <Link to="/orders">
             <svg width="20"
                  height="20"
                  viewBox="0 0 20 20"
