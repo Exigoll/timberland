@@ -36,15 +36,7 @@ P.S. Used as a server [mockAPI](https://mockapi.io)
 * SCSS / module SCSS
 * React Skeleton
 
-## Dependencies
-* react-content-loader
-* react-router-dom
-* normalize.css
-* sass
-* axios
-
 ## Contacts info
 * Location: city of Perm
 * Telegram: [Exigoll](https://t.me/exigoll)
 * Email: exigoll@bk.ru
-* Phone number: +7-996-325-97-14
