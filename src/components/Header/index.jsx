@@ -38,7 +38,7 @@ const Header = (props) => {
           <span>{productPrice} руб.</span>
         </div>
         <div className={styles.menuHeader__favorites}>
-          <Link to="/favorites">
+          <Link to="favorites">
             <svg width="22"
                  height="19"
                  viewBox="0 0 22 19"
@@ -51,7 +51,7 @@ const Header = (props) => {
           </Link>
         </div>
         <div className={styles.menuHeader__user}>
-          <Link to="/orders">
+          <Link to="orders">
             <svg width="20"
                  height="20"
                  viewBox="0 0 20 20"
