@@ -43,8 +43,8 @@ const Drawer = ({ onCloseCart, onRemove, items = [] }) => {
     ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке`
     : "Добавьте хотя бы один товар";
   const imageInfo = isOrderComplete
-    ? "./assets/image/check.png"
-    : "./assets/image/empty.png"
+    ? "assets/image/check.png"
+    : "assets/image/empty.png"
 
   const elementCart =
     <div className={styles.drawer__cart}>

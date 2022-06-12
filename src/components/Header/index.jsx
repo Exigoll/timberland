@@ -12,7 +12,7 @@ const Header = (props) => {
     <header className={styles.header}>
       <Link to="/" className={`${styles.header__logo} ${styles.logoHeader}`}>
         <img className={styles.logoHeader__img}
-             src="../assets/svgicons/logo-timberland.svg"
+             src="assets/svgicons/logo-timberland.svg"
              alt="Logo" />
         <h2 className={styles.logoHeader__subtitle}>Designer glasses shop</h2>
       </Link>

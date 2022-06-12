@@ -28,11 +28,11 @@ const Card = ({
   };
 
   const changeSvgCart = isItemAdded(id)
-    ? "./assets/svgicons/btn-checked.svg"
-    : "./assets/svgicons/btn-plus.svg";
+    ? "assets/svgicons/btn-checked.svg"
+    : "assets/svgicons/btn-plus.svg";
   const changeSvgFavorites = isAddedFavorite
-    ? "./assets/svgicons/like.svg"
-    : "./assets/svgicons/unlike.svg";
+    ? "assets/svgicons/like.svg"
+    : "assets/svgicons/unlike.svg";
 
   return (
     <div className={styles.itemContent}>

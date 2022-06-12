@@ -39,7 +39,7 @@ const Home = ({
           </h3>
           <div className="searchContent">
             <img className="searchContent__search"
-                 src="./assets/svgicons/search.svg"
+                 src="assets/svgicons/search.svg"
                  alt="SearchIcon" />
             <input onChange={onChangeSearchInput}
                    value={searchValue}
@@ -49,7 +49,7 @@ const Home = ({
             {searchValue &&
               <img className="searchContent__close"
                    onClick={onClickSearchClear}
-                   src="./assets/svgicons/close.svg"
+                   src="assets/svgicons/close.svg"
                    alt="CloseIcon" />}
           </div>
         </div>
