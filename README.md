@@ -1,5 +1,4 @@
 # Project: Glasses shop "Timberland"
-<hr style="border:1px solid gray">
 
 ## Description
 Glasses shop "Timberland" - is an online store selling sunglasses of the same name brand.
@@ -11,15 +10,12 @@ The store has the following features:
 * view completed orders
 
 P.S. Used as a server [mockAPI](https://mockapi.io)
-<hr>
 
 ## Installation
 
 1. Clone the repository from GitHub: ``git clone git@github.com:Exigoll/timberland.git``
 2. Install Dependencies:  ``npm install``
 3. Start the project:  ``npm start``
-
-<hr>
 
 ## Development stages
 * [Build](https://github.com/Exigoll/timberland/tree/dev)
